@@ -19,6 +19,10 @@
 		div#gameContainer {
 			background: transparent !important;
 			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 50%;
 		}
 
 		div#gameContainer canvas {
@@ -37,25 +41,23 @@
 			image-rendering: pixelated;
 			-ms-interpolation-mode: nearest-neighbor;
 		}
-		
+
 		.myDiv {
 			position: absolute;
 			top: 0;
-			left: 0;
-			padding: 20px;
+			left: 50%;
+			bottom: 0;
+			right: 0;
+			background-color: #444;
 			color: #fff;
-			width: 200px;
-			font-family: Arial, sans-serif;
+			padding: 20px;
+			box-sizing: border-box;
 		}
-		
-		.myDiv h2 {
-			font-size: 20px;
-			margin-bottom: 10px;
-		}
-		
+
+		.myDiv h2,
 		.myDiv p {
-			font-size: 16px;
-			line-height: 1.5;
+			margin: 0;
+			padding: 0;
 		}
 	</style>
 </head>
