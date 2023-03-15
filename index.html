@@ -19,10 +19,6 @@
 		div#gameContainer {
 			background: transparent !important;
 			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 50%;
 		}
 
 		div#gameContainer canvas {
@@ -45,19 +41,12 @@
 		.myDiv {
 			position: absolute;
 			top: 0;
-			left: 50%;
-			bottom: 0;
-			right: 0;
-			background-color: #444;
-			color: #fff;
-			padding: 20px;
-			box-sizing: border-box;
-		}
-
-		.myDiv h2,
-		.myDiv p {
-			margin: 0;
-			padding: 0;
+			left: 0;
+			width: 300px;
+			padding: 10px;
+			background-color: white;
+			color: black;
+			z-index: 1;
 		}
 	</style>
 </head>
@@ -78,6 +67,7 @@
 			}).then(function (instance) {
 				var canvas = instance.Module.canvas;
 				var container = canvas.parentElement;
+
 				function onResize() {
 					var w;
 					var h;
@@ -104,23 +94,22 @@
 				}
 
 				var scaleToFit;
+
 				try {
 					scaleToFit = !!JSON.parse("");
 				} catch (e) {
 					scaleToFit = true;
 				}
+
 				window.addEventListener('resize', onResize);
 				onResize();
 			});
 		</script>
 	</div>
 	<div class="myDiv">
-	  <h2>This is a heading in a div element</h2>
-	  <p>This is some text in a div element.</p>
-
-</div>
- 
-
+		<h2>This is a heading in a div element</h2>
+		<p>This is some text in a div element.</p>
+	</div>
 </body>
 
 </html>
