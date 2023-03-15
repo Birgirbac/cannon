@@ -19,6 +19,8 @@
 		div#gameContainer {
 			background: transparent !important;
 			position: absolute;
+			top: 0;
+			left: 0;
 		}
 
 		div#gameContainer canvas {
@@ -36,6 +38,15 @@
 			image-rendering: optimize-contrast;
 			image-rendering: pixelated;
 			-ms-interpolation-mode: nearest-neighbor;
+		}
+		
+		.myDiv {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 100px;
+			background-color: white;
+			text-align: center;
 		}
 	</style>
 </head>
@@ -92,9 +103,10 @@
 			});
 		</script>
 	</div>
-<div class="myDiv">
-  <h2>This is a heading in a div element</h2>
-  <p>This is some text in a div element.</p>
+	<div class="myDiv">
+	  <h2>This is a heading in a div element</h2>
+	  <p>This is some text in a div element.</p>
+
 </div>
  
 
